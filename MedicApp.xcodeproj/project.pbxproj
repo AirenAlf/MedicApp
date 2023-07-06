@@ -11,6 +11,7 @@
 		B13C8ECE2A51BDC800B4BE2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C8ECD2A51BDC800B4BE2F /* SceneDelegate.swift */; };
 		B13C8ED02A51BDC800B4BE2F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C8ECF2A51BDC800B4BE2F /* SplashViewController.swift */; };
 		B13C8ED52A51BDC900B4BE2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B13C8ED42A51BDC900B4BE2F /* Assets.xcassets */; };
+		B13C8EE02A51D1A300B4BE2F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C8EDF2A51D1A300B4BE2F /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		B13C8ECF2A51BDC800B4BE2F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		B13C8ED42A51BDC900B4BE2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B13C8ED92A51BDC900B4BE2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B13C8EDF2A51D1A300B4BE2F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				B13C8ECB2A51BDC800B4BE2F /* AppDelegate.swift */,
 				B13C8ECD2A51BDC800B4BE2F /* SceneDelegate.swift */,
 				B13C8ECF2A51BDC800B4BE2F /* SplashViewController.swift */,
+				B13C8EDF2A51D1A300B4BE2F /* HomeViewController.swift */,
 				B13C8ED42A51BDC900B4BE2F /* Assets.xcassets */,
 				B13C8ED92A51BDC900B4BE2F /* Info.plist */,
 			);
@@ -133,6 +136,7 @@
 				B13C8ED02A51BDC800B4BE2F /* SplashViewController.swift in Sources */,
 				B13C8ECC2A51BDC800B4BE2F /* AppDelegate.swift in Sources */,
 				B13C8ECE2A51BDC800B4BE2F /* SceneDelegate.swift in Sources */,
+				B13C8EE02A51D1A300B4BE2F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
