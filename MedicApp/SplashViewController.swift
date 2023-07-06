@@ -14,7 +14,7 @@ class SplashViewController: UIViewController {
     }
     func configureTimer(){
         timerSplash = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { timer in
-            let viewController = HomeViewController()
+            let viewController = LoginViewController()
             self.navigationController?.pushViewController(viewController, animated: true)
         }
     }
