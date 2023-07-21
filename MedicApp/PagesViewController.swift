@@ -33,7 +33,12 @@ class PagesViewController: UIPageViewController {
     func configureSkipButton(){
         skipButton.setTitle("Saltar", for: .normal)
         skipButton.setTitleColor(.white, for: .normal)
+        skipButton.addTarget(self, action: #selector(nextMenu), for: .touchDown)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: skipButton)
+    }
+    @objc func nextMenu(){
+        let nextMenu = HomeViewController()
+        self.navigationController?.pushViewController(nextMenu, animated: true)
     }
     func SetViewC(){
         let firstPage = InitViewController(Imagen: "Doctors", Text: "Especialistas", Description: "Ver  los especialistas medicos que hay disponibles para agendar tu cita.")

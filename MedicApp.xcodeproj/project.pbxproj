@@ -14,7 +14,9 @@
 		B13C8ECE2A51BDC800B4BE2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C8ECD2A51BDC800B4BE2F /* SceneDelegate.swift */; };
 		B13C8ED02A51BDC800B4BE2F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C8ECF2A51BDC800B4BE2F /* SplashViewController.swift */; };
 		B13C8ED52A51BDC900B4BE2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B13C8ED42A51BDC900B4BE2F /* Assets.xcassets */; };
-		B154A1DE2A6816D40034DD2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B154A1DD2A6816D40034DD2C /* HomeViewController.swift */; };
+		B154A1DE2A6816D40034DD2C /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B154A1DD2A6816D40034DD2C /* UserListCell.swift */; };
+		B15E92132A6AE3690044B3AD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E92122A6AE3690044B3AD /* HomeViewController.swift */; };
+		B15E92152A6AE9300044B3AD /* MedicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E92142A6AE9300044B3AD /* MedicModel.swift */; };
 		B1C1787E2A5B10B2003E49CF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B1C1787D2A5B10B2003E49CF /* Alamofire */; };
 		E00015C5743D4D60135A840D /* Pods_MedicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5367217C791E48CC049AEFEC /* Pods_MedicApp.framework */; };
 /* End PBXBuildFile section */
@@ -30,7 +32,9 @@
 		B13C8ECF2A51BDC800B4BE2F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		B13C8ED42A51BDC900B4BE2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B13C8ED92A51BDC900B4BE2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B154A1DD2A6816D40034DD2C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B154A1DD2A6816D40034DD2C /* UserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
+		B15E92122A6AE3690044B3AD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B15E92142A6AE9300044B3AD /* MedicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicModel.swift; sourceTree = "<group>"; };
 		C07D4B8A6B462C62B70026B1 /* Pods-MedicApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicApp.debug.xcconfig"; path = "Target Support Files/Pods-MedicApp/Pods-MedicApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EFDF81DD2DC1163C0ED13938 /* Pods-MedicApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicApp.release.xcconfig"; path = "Target Support Files/Pods-MedicApp/Pods-MedicApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,7 +79,9 @@
 				B134802E2A58796A00338220 /* LoginViewController.swift */,
 				B13328532A5D8905004A4AFB /* InitViewController.swift */,
 				B13328552A5D8FC7004A4AFB /* PagesViewController.swift */,
-				B154A1DD2A6816D40034DD2C /* HomeViewController.swift */,
+				B154A1DD2A6816D40034DD2C /* UserListCell.swift */,
+				B15E92122A6AE3690044B3AD /* HomeViewController.swift */,
+				B15E92142A6AE9300044B3AD /* MedicModel.swift */,
 				B13C8ED42A51BDC900B4BE2F /* Assets.xcassets */,
 				B13C8ED92A51BDC900B4BE2F /* Info.plist */,
 			);
@@ -221,9 +227,11 @@
 				B13C8ED02A51BDC800B4BE2F /* SplashViewController.swift in Sources */,
 				B13C8ECC2A51BDC800B4BE2F /* AppDelegate.swift in Sources */,
 				B13C8ECE2A51BDC800B4BE2F /* SceneDelegate.swift in Sources */,
+				B15E92152A6AE9300044B3AD /* MedicModel.swift in Sources */,
+				B15E92132A6AE3690044B3AD /* HomeViewController.swift in Sources */,
 				B134802F2A58796A00338220 /* LoginViewController.swift in Sources */,
 				B13328542A5D8905004A4AFB /* InitViewController.swift in Sources */,
-				B154A1DE2A6816D40034DD2C /* HomeViewController.swift in Sources */,
+				B154A1DE2A6816D40034DD2C /* UserListCell.swift in Sources */,
 				B13328562A5D8FC7004A4AFB /* PagesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

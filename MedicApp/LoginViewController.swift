@@ -62,6 +62,7 @@ class LoginViewController: UIViewController {
         skipButton.setTitleColor(.black, for: .normal)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: skipButton)
     }
+    
     func configureTitleText(){
       
         titleText.translatesAutoresizingMaskIntoConstraints = false
