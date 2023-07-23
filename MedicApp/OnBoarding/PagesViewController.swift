@@ -6,8 +6,15 @@ class PagesViewController: UIPageViewController {
     let pageControl = UIPageControl()
     private var skipButton = UIButton(type: .system)
     
-    override init(transitionStyle style: UIPageViewController.TransitionStyle, navigationOrientation: UIPageViewController.NavigationOrientation, options: [UIPageViewController.OptionsKey : Any]? = nil) {
+    private let viewDataSource: PagesViewDataSource?
+    private let viewDelegate: PagesViewDelegate?
+    
+    init(viewDataSource: PagesViewDataSource, viewDelegate: PagesViewDelegate) {
+        self.viewDataSource = viewDataSource
+        self.viewDelegate = viewDelegate
         super.init(transitionStyle: UIPageViewController.TransitionStyle.scroll, navigationOrientation: UIPageViewController.NavigationOrientation.horizontal)
+        self.viewDataSource?.view = self
+        self.viewDelegate?.view = self
     }
     
     required init?(coder: NSCoder) {
@@ -17,8 +24,8 @@ class PagesViewController: UIPageViewController {
     override func viewDidLoad() {
         navigationItem.setHidesBackButton(true, animated: false)
         super.viewDidLoad()
-        dataSource = self
-        delegate = self
+        dataSource = viewDataSource
+        delegate = viewDelegate
         view.backgroundColor = .blue
         configureSkipButton()
         SetViewC()
@@ -70,34 +77,4 @@ class PagesViewController: UIPageViewController {
     }
 }
 
-extension PagesViewController: UIPageViewControllerDataSource {
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let currentIndex = pages.firstIndex(of: viewController) else { return nil }
-        if currentIndex != 0 {
-            return pages[currentIndex - 1]
-        } else {
-            
-            return nil
-            
-        }
-    }
-    
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let currentIndex = pages.firstIndex(of: viewController) else { return nil }
-        if currentIndex < pages.count - 1 {
-            return pages[currentIndex + 1]
-        } else {
-            return nil
-        }
-    }
-}
-
-extension PagesViewController: UIPageViewControllerDelegate {
-    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-        guard let viewController = pageViewController.viewControllers else { return }
-        guard let currentIndex = pages.firstIndex(of: viewController[0]) else { return }
-        pageControl.currentPage = currentIndex
-    
-        }
-    }
 

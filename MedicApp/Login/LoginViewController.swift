@@ -124,7 +124,7 @@ class LoginViewController: UIViewController {
 
     @objc func actionLogin(){
         if usuarioLabel.text == "A", passwordLabel.text == "1"{
-            navigationController?.pushViewController(PagesViewController(), animated: true)
+            navigationController?.pushViewController(PagesViewController(viewDataSource: PagesViewDataSource(), viewDelegate: PagesViewDelegate()), animated: true)
         } else {
             
             let alertController = UIAlertController(title: "Atención", message: "Correo y/o contraseña son incorrectas", preferredStyle: .alert)
