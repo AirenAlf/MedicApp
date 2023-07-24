@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B132F31B2A6EAC8E002B7B91 /* LoginConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B132F31A2A6EAC8E002B7B91 /* LoginConstants.swift */; };
 		B13328542A5D8905004A4AFB /* InitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13328532A5D8905004A4AFB /* InitViewController.swift */; };
 		B13328562A5D8FC7004A4AFB /* PagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13328552A5D8FC7004A4AFB /* PagesViewController.swift */; };
 		B134802F2A58796A00338220 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B134802E2A58796A00338220 /* LoginViewController.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		5367217C791E48CC049AEFEC /* Pods_MedicApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedicApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B132F31A2A6EAC8E002B7B91 /* LoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstants.swift; sourceTree = "<group>"; };
 		B13328532A5D8905004A4AFB /* InitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitViewController.swift; sourceTree = "<group>"; };
 		B13328552A5D8FC7004A4AFB /* PagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesViewController.swift; sourceTree = "<group>"; };
 		B134802E2A58796A00338220 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				B134802E2A58796A00338220 /* LoginViewController.swift */,
+				B132F31A2A6EAC8E002B7B91 /* LoginConstants.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				B160CDE42A6D8B2600E862ED /* PagesViewDelegate.swift in Sources */,
 				B160CDE62A6D8E0B00E862ED /* HomeViewDataSource.swift in Sources */,
 				B160CDE02A6D834900E862ED /* PagesViewDataSource.swift in Sources */,
+				B132F31B2A6EAC8E002B7B91 /* LoginConstants.swift in Sources */,
 				B160CDDC2A6D7BBC00E862ED /* Constants.swift in Sources */,
 				B13C8ECC2A51BDC800B4BE2F /* AppDelegate.swift in Sources */,
 				B13C8ECE2A51BDC800B4BE2F /* SceneDelegate.swift in Sources */,

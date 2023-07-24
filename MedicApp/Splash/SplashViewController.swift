@@ -16,7 +16,7 @@ class SplashViewController: UIViewController, LoadingSpinnerView {
    
     func configureImage() {
         splashImage.contentMode = .scaleAspectFill
-        splashImage.image = Constants.image.splash
+        splashImage.image = SplashConstants.image.splash
         splashImage.alpha = SplashConstants.image.alpha
         splashImage.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(splashImage)
