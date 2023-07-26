@@ -16,12 +16,13 @@ class Constants {
         static let loginButtonFont = UIFont.boldSystemFont(ofSize: 12)
     }
     enum layout {
-        static let titleTop = 50
-        static let titleLeading = 60
-        static let buttonTop = 50
-        static let buttonLeading = 70
-        static let buttonTrailing = -70
-        static let buttonHeight = 30
+        static let titleTop = CGFloat(50)
+        static let titleLeading = CGFloat(60)
+        static let titleTrailing = CGFloat(-60)
+        static let buttonTop = CGFloat(50)
+        static let buttonLeading = CGFloat(70)
+        static let buttonTrailing = CGFloat(-70)
+        static let buttonHeight = CGFloat(30)
     }
 
 }

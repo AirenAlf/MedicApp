@@ -10,12 +10,10 @@ class LoginViewController: UIViewController {
     private var lineText = UIView()
     private var lineTextTwo = UIView()
     private var symbolUser = UIImageView()
-    private var imagenPassword = UIImageView()
+    private var symbolPassword = UIImageView()
     private var imagenPrivate = UIImageView()
     private var loginButton = UIButton()
-    private let privacyButton = UIButton(type: .custom)
-
-
+    private let symbolPrivacy = UIButton(type: .custom)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +21,8 @@ class LoginViewController: UIViewController {
         view.backgroundColor = UIColor(named: "ViewBackground")
         configureSkipButton()
         configureTitleText()
-        configureLabel(texto: usuarioLabel, placeholder: "Correo electrónico", type: "email")
-        configureLabel(texto: passwordLabel, placeholder: "Contraseña", type: "password")
+        configureLabel(texto: usuarioLabel, placeholder: LoginConstants.parameter.userLabel, type: LoginConstants.parameter.userType)
+        configureLabel(texto: passwordLabel, placeholder: LoginConstants.parameter.passwordLabel, type: LoginConstants.parameter.passwordType)
         configureLineText()
         configureLineTextTwo()
         configureImagenUsuario()
@@ -32,46 +30,37 @@ class LoginViewController: UIViewController {
         configureToggleButton()
         configureLoginButton()
         configureLayout()
-        
     }
     func configureToggleButton(){
-        privacyButton.translatesAutoresizingMaskIntoConstraints = false
-        privacyButton.setImage(LoginConstants.image.toggleImageOff, for: .normal)
-        privacyButton.tintColor = .lightGray
-        privacyButton.addTarget(self, action: #selector(PasswordVisibility), for: .touchDown)
-        privacyButton.addTarget(self, action: #selector(PasswordNoVisibility), for: .touchUpInside)
-            view.addSubview(privacyButton)
+        symbolPrivacy.translatesAutoresizingMaskIntoConstraints = false
+        symbolPrivacy.setImage(LoginConstants.image.toggleImageOff, for: .normal)
+        symbolPrivacy.tintColor = .lightGray
+        symbolPrivacy.addTarget(self, action: #selector(PasswordVisibility), for: .touchDown)
+        symbolPrivacy.addTarget(self, action: #selector(PasswordNoVisibility), for: .touchUpInside)
+            view.addSubview(symbolPrivacy)
         }
-
         @objc func PasswordVisibility() {
             passwordLabel.isSecureTextEntry = false
             let buttonImage = LoginConstants.image.toggleImageOn
-            privacyButton.setImage(buttonImage, for: .normal)
-        
+            symbolPrivacy.setImage(buttonImage, for: .normal)
         }
     @objc func PasswordNoVisibility() {
         passwordLabel.isSecureTextEntry = true
         let buttonImage = LoginConstants.image.toggleImageOff
-        privacyButton.setImage(buttonImage, for: .normal)
-    
+        symbolPrivacy.setImage(buttonImage, for: .normal)
     }
-    
-    
     func configureSkipButton(){
         skipButton.setTitle(LoginConstants.title.buttonTitle, for: .normal)
         skipButton.setTitleColor(.black, for: .normal)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: skipButton)
     }
-    
     func configureTitleText(){
-      
         titleText.translatesAutoresizingMaskIntoConstraints = false
         titleText.text = LoginConstants.title.firstTitle
         titleText.font = Constants.fonts.firstTitleFont
         titleText.numberOfLines = 0
         titleText.textAlignment = .center
         view.addSubview(titleText)
-        
     }
     func configureLineText(){
         lineText.translatesAutoresizingMaskIntoConstraints = false
@@ -89,21 +78,20 @@ class LoginViewController: UIViewController {
         view.addSubview(symbolUser)
     }
     func configureImagenPassword(){
-        imagenPassword.translatesAutoresizingMaskIntoConstraints = false
-        imagenPassword.image = LoginConstants.image.imagePassword
-        view.addSubview(imagenPassword)
+        symbolPassword.translatesAutoresizingMaskIntoConstraints = false
+        symbolPassword.image = LoginConstants.image.imagePassword
+        view.addSubview(symbolPassword)
     }
-    
     func configureLabel(texto : UITextField, placeholder: String, type: String){
         texto.translatesAutoresizingMaskIntoConstraints = false
         texto.placeholder = placeholder
         texto.font = Constants.fonts.loginButtonFont
         
         switch type {
-        case "email":
+        case LoginConstants.parameter.userType:
             texto.keyboardType = .emailAddress
             texto.textContentType = .emailAddress
-        case "password":
+        case LoginConstants.parameter.passwordType:
            texto.isSecureTextEntry = true
             
         default:
@@ -111,7 +99,6 @@ class LoginViewController: UIViewController {
         }
         view.addSubview(texto)
     }
-    
     func configureLoginButton(){
         loginButton.translatesAutoresizingMaskIntoConstraints = false
         loginButton.backgroundColor = Constants.color.button
@@ -121,59 +108,47 @@ class LoginViewController: UIViewController {
         loginButton.addTarget(self, action: #selector(actionLogin), for: .touchDown)
         view.addSubview(loginButton)
     }
-
     @objc func actionLogin(){
-        if usuarioLabel.text == "A", passwordLabel.text == "1"{
+        if usuarioLabel.text == LoginConstants.login.ususario, passwordLabel.text == LoginConstants.login.password{
             navigationController?.pushViewController(PagesViewController(viewDataSource: PagesViewDataSource(), viewDelegate: PagesViewDelegate()), animated: true)
         } else {
             
-            let alertController = UIAlertController(title: "Atención", message: "Correo y/o contraseña son incorrectas", preferredStyle: .alert)
+            let alertController = UIAlertController(title: LoginConstants.alert.title, message: LoginConstants.alert.message, preferredStyle: .alert)
             
-            let okAction = UIAlertAction(title: "OK", style: .default)
+            let okAction = UIAlertAction(title: LoginConstants.alert.tittleAction, style: .default)
             
             alertController.addAction(okAction)
             self.present(alertController, animated: true)
         }
-        
     }
-    
     func configureLayout(){
         NSLayoutConstraint.activate ([
-            
-            titleText.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
-            titleText.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 60),
-            
-            usuarioLabel.topAnchor.constraint(equalTo: titleText.bottomAnchor, constant: 50),
-            usuarioLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70),
-            
-            lineText.topAnchor.constraint(equalTo: usuarioLabel.bottomAnchor, constant: 5),
-            lineText.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70),
-            lineText.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -60),
-            lineText.heightAnchor.constraint(equalToConstant: 1),
-            
-            symbolUser.topAnchor.constraint(equalTo: titleText.bottomAnchor, constant: 50),
-            symbolUser.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            
-            passwordLabel.topAnchor.constraint(equalTo: lineText.bottomAnchor, constant: 50),
-            passwordLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70),
-            
-            lineTextTwo.topAnchor.constraint(equalTo: passwordLabel.bottomAnchor, constant: 5),
-            lineTextTwo.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70),
-            lineTextTwo.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -60),
-            lineTextTwo.heightAnchor.constraint(equalToConstant: 1),
-            
-            imagenPassword.topAnchor.constraint(equalTo: symbolUser.bottomAnchor, constant: 50),
-            imagenPassword.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            
-            privacyButton.bottomAnchor.constraint(equalTo: lineTextTwo.topAnchor, constant: -5),
-            privacyButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -60),
-            
-            loginButton.topAnchor.constraint(equalTo: passwordLabel.bottomAnchor, constant: 50),
+            titleText.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: Constants.layout.titleTop),
+            titleText.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constants.layout.titleLeading),
+            titleText.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: Constants.layout.titleTrailing),
+            usuarioLabel.topAnchor.constraint(equalTo: titleText.bottomAnchor, constant: LoginConstants.label.labelTop),
+            usuarioLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: LoginConstants.label.labelLeading),
+            lineText.topAnchor.constraint(equalTo: usuarioLabel.bottomAnchor, constant: LoginConstants.line.lineTextTop),
+            lineText.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: LoginConstants.line.lineTextLeading),
+            lineText.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: LoginConstants.line.lineTextTrailing),
+            lineText.heightAnchor.constraint(equalToConstant: LoginConstants.line.lineTextHeight),
+            symbolUser.topAnchor.constraint(equalTo: titleText.bottomAnchor, constant: LoginConstants.symbol.symbolTop),
+            symbolUser.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: LoginConstants.symbol.symbolLeading),
+            passwordLabel.topAnchor.constraint(equalTo: lineText.bottomAnchor, constant: LoginConstants.label.labelTop),
+            passwordLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: LoginConstants.label.labelLeading),
+            lineTextTwo.topAnchor.constraint(equalTo: passwordLabel.bottomAnchor, constant: LoginConstants.line.lineTextTop),
+            lineTextTwo.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: LoginConstants.line.lineTextLeading),
+            lineTextTwo.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: LoginConstants.line.lineTextTrailing),
+            lineTextTwo.heightAnchor.constraint(equalToConstant: LoginConstants.line.lineTextHeight),
+            symbolPassword.topAnchor.constraint(equalTo: symbolUser.bottomAnchor, constant: LoginConstants.symbol.symbolTop),
+            symbolPassword.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: LoginConstants.symbol.symbolLeading),
+            symbolPrivacy.bottomAnchor.constraint(equalTo: lineTextTwo.topAnchor, constant: LoginConstants.symbol.symbolPrivacyBotton),
+            symbolPrivacy.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: LoginConstants.symbol.symbolPrivacyTrailing),
+            loginButton.topAnchor.constraint(equalTo: passwordLabel.bottomAnchor, constant: Constants.layout.buttonTop),
             loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            loginButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70),
-            loginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -70),
-            loginButton.heightAnchor.constraint(equalToConstant: 30)
+            loginButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constants.layout.buttonLeading),
+            loginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: Constants.layout.buttonTrailing),
+            loginButton.heightAnchor.constraint(equalToConstant: Constants.layout.buttonHeight)
         ])
-        
     }
 }
