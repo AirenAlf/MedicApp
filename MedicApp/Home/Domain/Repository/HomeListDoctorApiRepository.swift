@@ -1,8 +1,16 @@
-//
-//  HomeListDoctorApiRepository.swift
-//  MedicApp
-//
-//  Created by Airen Alfonzo on 30/07/23.
-//
+import UIKit
 
-import Foundation
+class HomeListDoctorApiRepository : HomeListDoctorRepository {
+    
+    var networkApi : HomeListDoctorResApi
+    
+    init(networkApi: HomeListDoctorResApi) {
+        self.networkApi = networkApi
+    }
+    
+    func execute(completionHandler: @escaping (Result<MedicModel, Error>) -> Void) {
+        networkApi.execute(completionHandler: completionHandler)
+    }
+    
+    
+}

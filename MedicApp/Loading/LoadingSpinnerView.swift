@@ -34,32 +34,11 @@ extension LoadingSpinnerView where Self: UIViewController {
         content.tag = 120
         spinner.startAnimating()
         
-        
     }
+    
     func hiddenSpinner() {
         if let removed = view.viewWithTag(120){
             removed.removeFromSuperview()
         }
     }
-
 }
-
-/* func configureLoading(){
-    let isLoading = true
-    if isLoading == true {
-        loadingView.isHidden = false
-        activityIndicator.startAnimating()
-    }
-   
-    loadingView.frame = view.bounds
-    loadingView.backgroundColor = UIColor.white
-    activityIndicator.style = .large
-    activityIndicator.color = UIColor(named: "ColorButton")
-    activityIndicator.center = loadingView.center
-    loadingView.addSubview(activityIndicator)
-    view.addSubview(loadingView) }*/
-   
-    
-
-//private var loadingView = UIView()
-// private var activityIndicator = UIActivityIndicatorView()

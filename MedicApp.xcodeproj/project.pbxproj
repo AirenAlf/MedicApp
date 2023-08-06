@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B131F1A32A76AC9200CF7CD3 /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B131F1A22A76AC9200CF7CD3 /* HomeViewProtocol.swift */; };
+		B131F1A82A76B51B00CF7CD3 /* HomeListDoctorResApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B131F1A72A76B51B00CF7CD3 /* HomeListDoctorResApi.swift */; };
+		B131F1AA2A76B59D00CF7CD3 /* HomeListDoctorUrlResApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B131F1A92A76B59D00CF7CD3 /* HomeListDoctorUrlResApi.swift */; };
+		B131F1AC2A76BB1E00CF7CD3 /* HomeListDoctorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B131F1AB2A76BB1E00CF7CD3 /* HomeListDoctorRepository.swift */; };
+		B131F1AE2A76BB7400CF7CD3 /* HomeListDoctorApiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B131F1AD2A76BB7400CF7CD3 /* HomeListDoctorApiRepository.swift */; };
+		B131F1B12A76BCB500CF7CD3 /* HomeListDoctorUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B131F1B02A76BCB500CF7CD3 /* HomeListDoctorUseCase.swift */; };
+		B131F1B32A76BDED00CF7CD3 /* HomeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B131F1B22A76BDED00CF7CD3 /* HomeViewPresenter.swift */; };
+		B131F1B52A76C00400CF7CD3 /* HomeViewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B131F1B42A76C00400CF7CD3 /* HomeViewPresenterProtocol.swift */; };
 		B132F31B2A6EAC8E002B7B91 /* LoginConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B132F31A2A6EAC8E002B7B91 /* LoginConstants.swift */; };
 		B13328542A5D8905004A4AFB /* InitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13328532A5D8905004A4AFB /* InitViewController.swift */; };
 		B13328562A5D8FC7004A4AFB /* PagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13328552A5D8FC7004A4AFB /* PagesViewController.swift */; };
@@ -15,6 +23,7 @@
 		B13C8ECE2A51BDC800B4BE2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C8ECD2A51BDC800B4BE2F /* SceneDelegate.swift */; };
 		B13C8ED02A51BDC800B4BE2F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C8ECF2A51BDC800B4BE2F /* SplashViewController.swift */; };
 		B13C8ED52A51BDC900B4BE2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B13C8ED42A51BDC900B4BE2F /* Assets.xcassets */; };
+		B150210C2A757BC600968116 /* PagesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150210B2A757BC600968116 /* PagesConstants.swift */; };
 		B154A1DE2A6816D40034DD2C /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B154A1DD2A6816D40034DD2C /* UserListCell.swift */; };
 		B15E92132A6AE3690044B3AD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E92122A6AE3690044B3AD /* HomeViewController.swift */; };
 		B15E92152A6AE9300044B3AD /* MedicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E92142A6AE9300044B3AD /* MedicModel.swift */; };
@@ -30,6 +39,14 @@
 
 /* Begin PBXFileReference section */
 		5367217C791E48CC049AEFEC /* Pods_MedicApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedicApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B131F1A22A76AC9200CF7CD3 /* HomeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewProtocol.swift; sourceTree = "<group>"; };
+		B131F1A72A76B51B00CF7CD3 /* HomeListDoctorResApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListDoctorResApi.swift; sourceTree = "<group>"; };
+		B131F1A92A76B59D00CF7CD3 /* HomeListDoctorUrlResApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListDoctorUrlResApi.swift; sourceTree = "<group>"; };
+		B131F1AB2A76BB1E00CF7CD3 /* HomeListDoctorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListDoctorRepository.swift; sourceTree = "<group>"; };
+		B131F1AD2A76BB7400CF7CD3 /* HomeListDoctorApiRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListDoctorApiRepository.swift; sourceTree = "<group>"; };
+		B131F1B02A76BCB500CF7CD3 /* HomeListDoctorUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListDoctorUseCase.swift; sourceTree = "<group>"; };
+		B131F1B22A76BDED00CF7CD3 /* HomeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewPresenter.swift; sourceTree = "<group>"; };
+		B131F1B42A76C00400CF7CD3 /* HomeViewPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewPresenterProtocol.swift; sourceTree = "<group>"; };
 		B132F31A2A6EAC8E002B7B91 /* LoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstants.swift; sourceTree = "<group>"; };
 		B13328532A5D8905004A4AFB /* InitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitViewController.swift; sourceTree = "<group>"; };
 		B13328552A5D8FC7004A4AFB /* PagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +57,7 @@
 		B13C8ECF2A51BDC800B4BE2F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		B13C8ED42A51BDC900B4BE2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B13C8ED92A51BDC900B4BE2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B150210B2A757BC600968116 /* PagesConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesConstants.swift; sourceTree = "<group>"; };
 		B154A1DD2A6816D40034DD2C /* UserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
 		B15E92122A6AE3690044B3AD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B15E92142A6AE9300044B3AD /* MedicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicModel.swift; sourceTree = "<group>"; };
@@ -66,6 +84,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B131F1A42A76B43300CF7CD3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B131F1A62A76B45B00CF7CD3 /* Network */,
+				B131F1A52A76B44D00CF7CD3 /* Repository */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B131F1A52A76B44D00CF7CD3 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B131F1AB2A76BB1E00CF7CD3 /* HomeListDoctorRepository.swift */,
+				B131F1AD2A76BB7400CF7CD3 /* HomeListDoctorApiRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B131F1A62A76B45B00CF7CD3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B131F1A72A76B51B00CF7CD3 /* HomeListDoctorResApi.swift */,
+				B131F1A92A76B59D00CF7CD3 /* HomeListDoctorUrlResApi.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B131F1AF2A76BC8700CF7CD3 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				B131F1B02A76BCB500CF7CD3 /* HomeListDoctorUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
 		B13C8EBF2A51BDC800B4BE2F = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +186,7 @@
 				B160CDDF2A6D834900E862ED /* PagesViewDataSource.swift */,
 				B160CDE32A6D8B2600E862ED /* PagesViewDelegate.swift */,
 				B13328532A5D8905004A4AFB /* InitViewController.swift */,
+				B150210B2A757BC600968116 /* PagesConstants.swift */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -140,6 +194,8 @@
 		B160CDD42A6D74D400E862ED /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B131F1AF2A76BC8700CF7CD3 /* UseCase */,
+				B131F1A42A76B43300CF7CD3 /* Domain */,
 				B160CDD72A6D750800E862ED /* Presenter */,
 				B160CDD62A6D74FF00E862ED /* Model */,
 				B160CDD52A6D74F200E862ED /* View */,
@@ -153,6 +209,9 @@
 				B154A1DD2A6816D40034DD2C /* UserListCell.swift */,
 				B15E92122A6AE3690044B3AD /* HomeViewController.swift */,
 				B160CDE52A6D8E0B00E862ED /* HomeViewDataSource.swift */,
+				B131F1A22A76AC9200CF7CD3 /* HomeViewProtocol.swift */,
+				B131F1B22A76BDED00CF7CD3 /* HomeViewPresenter.swift */,
+				B131F1B42A76C00400CF7CD3 /* HomeViewPresenterProtocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -327,19 +386,28 @@
 			files = (
 				B160CDDE2A6D7F4100E862ED /* SplashConstants.swift in Sources */,
 				B13C8ED02A51BDC800B4BE2F /* SplashViewController.swift in Sources */,
+				B150210C2A757BC600968116 /* PagesConstants.swift in Sources */,
 				B160CDE42A6D8B2600E862ED /* PagesViewDelegate.swift in Sources */,
 				B160CDE62A6D8E0B00E862ED /* HomeViewDataSource.swift in Sources */,
+				B131F1B12A76BCB500CF7CD3 /* HomeListDoctorUseCase.swift in Sources */,
 				B160CDE02A6D834900E862ED /* PagesViewDataSource.swift in Sources */,
 				B132F31B2A6EAC8E002B7B91 /* LoginConstants.swift in Sources */,
+				B131F1A32A76AC9200CF7CD3 /* HomeViewProtocol.swift in Sources */,
 				B160CDDC2A6D7BBC00E862ED /* Constants.swift in Sources */,
 				B13C8ECC2A51BDC800B4BE2F /* AppDelegate.swift in Sources */,
 				B13C8ECE2A51BDC800B4BE2F /* SceneDelegate.swift in Sources */,
 				B15E92152A6AE9300044B3AD /* MedicModel.swift in Sources */,
+				B131F1AC2A76BB1E00CF7CD3 /* HomeListDoctorRepository.swift in Sources */,
 				B15E92132A6AE3690044B3AD /* HomeViewController.swift in Sources */,
+				B131F1B52A76C00400CF7CD3 /* HomeViewPresenterProtocol.swift in Sources */,
 				B134802F2A58796A00338220 /* LoginViewController.swift in Sources */,
+				B131F1AA2A76B59D00CF7CD3 /* HomeListDoctorUrlResApi.swift in Sources */,
+				B131F1AE2A76BB7400CF7CD3 /* HomeListDoctorApiRepository.swift in Sources */,
 				B13328542A5D8905004A4AFB /* InitViewController.swift in Sources */,
 				B160CDCF2A6D729500E862ED /* LoadingSpinnerView.swift in Sources */,
+				B131F1A82A76B51B00CF7CD3 /* HomeListDoctorResApi.swift in Sources */,
 				B154A1DE2A6816D40034DD2C /* UserListCell.swift in Sources */,
+				B131F1B32A76BDED00CF7CD3 /* HomeViewPresenter.swift in Sources */,
 				B13328562A5D8FC7004A4AFB /* PagesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

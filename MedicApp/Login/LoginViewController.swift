@@ -50,7 +50,7 @@ class LoginViewController: UIViewController {
         symbolPrivacy.setImage(buttonImage, for: .normal)
     }
     func configureSkipButton(){
-        skipButton.setTitle(LoginConstants.title.buttonTitle, for: .normal)
+        skipButton.setTitle(Constants.button.buttonTitle, for: .normal)
         skipButton.setTitleColor(.black, for: .normal)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: skipButton)
     }

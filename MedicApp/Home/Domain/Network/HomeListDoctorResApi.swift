@@ -1,8 +1,6 @@
-//
-//  HomeListDocyo.swift
-//  MedicApp
-//
-//  Created by Airen Alfonzo on 30/07/23.
-//
+import UIKit
 
-import Foundation
+protocol HomeListDoctorResApi {
+    func execute(completionHandler: @escaping (Result<MedicModel, Error>) -> Void ) 
+        
+}

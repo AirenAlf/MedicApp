@@ -1,8 +1,16 @@
-//
-//  HomeListDoctorUseCase.swift
-//  MedicApp
-//
-//  Created by Airen Alfonzo on 30/07/23.
-//
+import UIKit
 
-import Foundation
+class HomeListDoctorUseCase {
+    
+    var repository : HomeListDoctorRepository
+    
+    init(repository: HomeListDoctorRepository) {
+        self.repository = repository
+    }
+    
+    func execute(completionHandler: @escaping (Result<MedicModel, Error>) -> Void ) {
+        repository.execute { result in
+            completionHandler(result)
+        }
+    }
+}

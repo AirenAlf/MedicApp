@@ -1,10 +1,10 @@
 import UIKit
 
 class SplashViewController: UIViewController, LoadingSpinnerView {
-
+    
     private let splashImage = UIImageView()
     private var timerSplash = Timer()
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Constants.color.background
@@ -13,7 +13,7 @@ class SplashViewController: UIViewController, LoadingSpinnerView {
         configureImage()
         configureLayoutUno()
     }
-   
+    
     func configureImage() {
         splashImage.contentMode = .scaleAspectFill
         splashImage.image = SplashConstants.image.splash

@@ -15,7 +15,6 @@ class LoginConstants {
         static let imagePassword = UIImage(named: "Candado")
     }
     enum title {
-        static let buttonTitle = "Saltar"
         static let firstTitle = "Bienvenido(a) \n Consultorio Medico"
     }
     enum label{

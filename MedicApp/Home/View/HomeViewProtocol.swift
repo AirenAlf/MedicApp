@@ -1,8 +1,8 @@
-//
-//  HomeViewProtocol.swift
-//  MedicApp
-//
-//  Created by Airen Alfonzo on 30/07/23.
-//
+import UIKit
 
-import Foundation
+protocol HomeViewProtocol : AnyObject {
+    var doctorsList : [Doctor] {get}
+    
+    func getDataListDoctor(listDoctor : MedicModel)
+    
+}

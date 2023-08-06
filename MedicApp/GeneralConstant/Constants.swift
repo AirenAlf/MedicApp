@@ -9,6 +9,7 @@ class Constants {
     }
     enum button {
         static let titleLoginButton = "Ingresar"
+        static let buttonTitle = "Saltar"
         static let cornerRadiusButton = CGFloat(5)
     }
     enum fonts {

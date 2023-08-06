@@ -1,8 +1,6 @@
-//
-//  HomeViewPresenterProtocol.swift
-//  MedicApp
-//
-//  Created by Airen Alfonzo on 30/07/23.
-//
+import UIKit
 
-import Foundation
+protocol HomeViewPresenterProtocol {
+    func attach(viewController : HomeViewProtocol)
+    func successDataListDoctor()
+}

@@ -1,7 +1,7 @@
 import UIKit
 
-class HomeListDoctorResApi {
-    func execute(completionHandler: @escaping (Result<MedicModel, Error>) -> Void ) {
+class HomeListDoctorUrlResApi : HomeListDoctorResApi {
+    func execute(completionHandler: @escaping (Result<MedicModel, Error>) -> Void) {
         guard let url = URL(string: "https://run.mocky.io/v3/ac356bbe-88cd-4dcb-98a9-15d9fb4243dd") else {return}
         
         let urlSession = URLSession.shared
@@ -16,3 +16,4 @@ class HomeListDoctorResApi {
         }.resume()
     }
 }
+
