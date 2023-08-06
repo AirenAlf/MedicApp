@@ -14,17 +14,17 @@ class HomeViewPresenter : HomeViewPresenterProtocol {
     }
     
     func successDataListDoctor() {
+        viewController?.spinnerShow()
+        
         self.useCase.execute { [weak self] response in
+        self?.viewController?.spinnerHiddden()
+            
             switch response {
             case let .success(model):
                 self?.viewController?.getDataListDoctor(listDoctor: model )
-            case let .failure(nilModel):
-                print(nilModel)
-                
+            case .failure(_):
+                self?.viewController?.showAlertError()
             }
-          
         }
     }
-    
-    
 }

@@ -196,7 +196,6 @@
 			children = (
 				B131F1AF2A76BC8700CF7CD3 /* UseCase */,
 				B131F1A42A76B43300CF7CD3 /* Domain */,
-				B160CDD72A6D750800E862ED /* Presenter */,
 				B160CDD62A6D74FF00E862ED /* Model */,
 				B160CDD52A6D74F200E862ED /* View */,
 			);
@@ -210,8 +209,7 @@
 				B15E92122A6AE3690044B3AD /* HomeViewController.swift */,
 				B160CDE52A6D8E0B00E862ED /* HomeViewDataSource.swift */,
 				B131F1A22A76AC9200CF7CD3 /* HomeViewProtocol.swift */,
-				B131F1B22A76BDED00CF7CD3 /* HomeViewPresenter.swift */,
-				B131F1B42A76C00400CF7CD3 /* HomeViewPresenterProtocol.swift */,
+				B160CDD72A6D750800E862ED /* Presenter */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,6 +225,8 @@
 		B160CDD72A6D750800E862ED /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				B131F1B22A76BDED00CF7CD3 /* HomeViewPresenter.swift */,
+				B131F1B42A76C00400CF7CD3 /* HomeViewPresenterProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";

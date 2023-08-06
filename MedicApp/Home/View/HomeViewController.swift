@@ -41,11 +41,40 @@ class HomeViewController: UIViewController  {
             listUserTable.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             listUserTable.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 20),
             listUserTable.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
-            ])
-        }
+        ])
+    }
 }
-extension HomeViewController : HomeViewProtocol {
-   
+extension HomeViewController : HomeViewProtocol, LoadingSpinnerView {
+    
+    func spinnerShow() {
+        DispatchQueue.main.async{ [weak self] in
+            self?.showSpinner()
+        }
+    }
+    
+    func spinnerHiddden() {
+        DispatchQueue.main.async { [weak self] in
+            self?.hiddenSpinner()
+        }
+    }
+    
+    func showAlertError() {
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(title: "Error", message: "En estos momentos no es posible cargar la informacion", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "Volver a intentar", style: .default) { action in
+               
+                // Cambiamos la url y despues que el usuario le de al boton intentar de nuevo, cargue la informacion
+                
+                Constants.url.url = "https://run.mocky.io/v3/ac356bbe-88cd-4dcb-98a9-15d9fb4243dd"
+                self.presenter?.successDataListDoctor()
+            }
+          
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true)
+        }
+    }
+    
     func getDataListDoctor(listDoctor: MedicModel) {
         doctorsList = listDoctor.doctors
         DispatchQueue.main.async {
