@@ -33,6 +33,7 @@
 		B160CDE02A6D834900E862ED /* PagesViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160CDDF2A6D834900E862ED /* PagesViewDataSource.swift */; };
 		B160CDE42A6D8B2600E862ED /* PagesViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160CDE32A6D8B2600E862ED /* PagesViewDelegate.swift */; };
 		B160CDE62A6D8E0B00E862ED /* HomeViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160CDE52A6D8E0B00E862ED /* HomeViewDataSource.swift */; };
+		B16886932A7FFDE400BFC587 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16886922A7FFDE400BFC587 /* TabBarViewController.swift */; };
 		B1C1787E2A5B10B2003E49CF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B1C1787D2A5B10B2003E49CF /* Alamofire */; };
 		E00015C5743D4D60135A840D /* Pods_MedicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5367217C791E48CC049AEFEC /* Pods_MedicApp.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		B160CDDF2A6D834900E862ED /* PagesViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesViewDataSource.swift; sourceTree = "<group>"; };
 		B160CDE32A6D8B2600E862ED /* PagesViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesViewDelegate.swift; sourceTree = "<group>"; };
 		B160CDE52A6D8E0B00E862ED /* HomeViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewDataSource.swift; sourceTree = "<group>"; };
+		B16886922A7FFDE400BFC587 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C07D4B8A6B462C62B70026B1 /* Pods-MedicApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicApp.debug.xcconfig"; path = "Target Support Files/Pods-MedicApp/Pods-MedicApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EFDF81DD2DC1163C0ED13938 /* Pods-MedicApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicApp.release.xcconfig"; path = "Target Support Files/Pods-MedicApp/Pods-MedicApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +142,7 @@
 		B13C8ECA2A51BDC800B4BE2F /* MedicApp */ = {
 			isa = PBXGroup;
 			children = (
+				B16886912A7FFDBC00BFC587 /* TabBar */,
 				B160CDD92A6D7B5300E862ED /* GeneralConstant */,
 				B160CDD42A6D74D400E862ED /* Home */,
 				B160CDD82A6D756400E862ED /* Source */,
@@ -246,6 +249,14 @@
 				B160CDDB2A6D7BBC00E862ED /* Constants.swift */,
 			);
 			path = GeneralConstant;
+			sourceTree = "<group>";
+		};
+		B16886912A7FFDBC00BFC587 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B16886922A7FFDE400BFC587 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		B989D6E9C7E25878AF23B494 /* Frameworks */ = {
@@ -394,6 +405,7 @@
 				B132F31B2A6EAC8E002B7B91 /* LoginConstants.swift in Sources */,
 				B131F1A32A76AC9200CF7CD3 /* HomeViewProtocol.swift in Sources */,
 				B160CDDC2A6D7BBC00E862ED /* Constants.swift in Sources */,
+				B16886932A7FFDE400BFC587 /* TabBarViewController.swift in Sources */,
 				B13C8ECC2A51BDC800B4BE2F /* AppDelegate.swift in Sources */,
 				B13C8ECE2A51BDC800B4BE2F /* SceneDelegate.swift in Sources */,
 				B15E92152A6AE9300044B3AD /* MedicModel.swift in Sources */,
