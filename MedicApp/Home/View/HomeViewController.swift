@@ -1,6 +1,7 @@
 import UIKit
 import Kingfisher
 
+
 class HomeViewController: UIViewController  {
     
     var listUserTable = UITableView()
@@ -25,6 +26,7 @@ class HomeViewController: UIViewController  {
         configureTableView()
         configureList()
         presenter?.successDataListDoctor()
+        
     }
     
     func configureTableView(){
@@ -82,4 +84,5 @@ extension HomeViewController : HomeViewProtocol, LoadingSpinnerView {
         }
     }
 }
+
 

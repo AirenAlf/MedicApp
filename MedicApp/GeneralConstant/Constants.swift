@@ -26,7 +26,7 @@ class Constants {
         static let buttonHeight = CGFloat(30)
     }
     enum url {
-        static var url = "http://run.mocky.io/v3/ac356bbe-88cd-4dcb-98a9-15d9fb4243dd"
+        static var url = "https://run.mocky.io/v3/ac356bbe-88cd-4dcb-98a9-15d9fb4243dd"
     }
 
 }

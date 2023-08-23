@@ -33,6 +33,11 @@
 		B160CDE02A6D834900E862ED /* PagesViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160CDDF2A6D834900E862ED /* PagesViewDataSource.swift */; };
 		B160CDE42A6D8B2600E862ED /* PagesViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160CDE32A6D8B2600E862ED /* PagesViewDelegate.swift */; };
 		B160CDE62A6D8E0B00E862ED /* HomeViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160CDE52A6D8E0B00E862ED /* HomeViewDataSource.swift */; };
+		B162E35D2A94946D00CDD8BF /* TabBarConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B162E35C2A94946D00CDD8BF /* TabBarConstants.swift */; };
+		B162E3602A9498AD00CDD8BF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B162E35F2A9498AD00CDD8BF /* Kingfisher */; };
+		B1653D552A85586B006B8306 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1653D542A85586B006B8306 /* FavoritesViewController.swift */; };
+		B1653D572A8558C0006B8306 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1653D562A8558C0006B8306 /* CalendarViewController.swift */; };
+		B1653D592A855958006B8306 /* SesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1653D582A855958006B8306 /* SesionViewController.swift */; };
 		B16886932A7FFDE400BFC587 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16886922A7FFDE400BFC587 /* TabBarViewController.swift */; };
 		B1C1787E2A5B10B2003E49CF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B1C1787D2A5B10B2003E49CF /* Alamofire */; };
 		E00015C5743D4D60135A840D /* Pods_MedicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5367217C791E48CC049AEFEC /* Pods_MedicApp.framework */; };
@@ -68,6 +73,10 @@
 		B160CDDF2A6D834900E862ED /* PagesViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesViewDataSource.swift; sourceTree = "<group>"; };
 		B160CDE32A6D8B2600E862ED /* PagesViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesViewDelegate.swift; sourceTree = "<group>"; };
 		B160CDE52A6D8E0B00E862ED /* HomeViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewDataSource.swift; sourceTree = "<group>"; };
+		B162E35C2A94946D00CDD8BF /* TabBarConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarConstants.swift; sourceTree = "<group>"; };
+		B1653D542A85586B006B8306 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		B1653D562A8558C0006B8306 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		B1653D582A855958006B8306 /* SesionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesionViewController.swift; sourceTree = "<group>"; };
 		B16886922A7FFDE400BFC587 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C07D4B8A6B462C62B70026B1 /* Pods-MedicApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicApp.debug.xcconfig"; path = "Target Support Files/Pods-MedicApp/Pods-MedicApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EFDF81DD2DC1163C0ED13938 /* Pods-MedicApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicApp.release.xcconfig"; path = "Target Support Files/Pods-MedicApp/Pods-MedicApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B162E3602A9498AD00CDD8BF /* Kingfisher in Frameworks */,
 				E00015C5743D4D60135A840D /* Pods_MedicApp.framework in Frameworks */,
 				B1C1787E2A5B10B2003E49CF /* Alamofire in Frameworks */,
 			);
@@ -212,6 +222,9 @@
 				B15E92122A6AE3690044B3AD /* HomeViewController.swift */,
 				B160CDE52A6D8E0B00E862ED /* HomeViewDataSource.swift */,
 				B131F1A22A76AC9200CF7CD3 /* HomeViewProtocol.swift */,
+				B1653D542A85586B006B8306 /* FavoritesViewController.swift */,
+				B1653D562A8558C0006B8306 /* CalendarViewController.swift */,
+				B1653D582A855958006B8306 /* SesionViewController.swift */,
 				B160CDD72A6D750800E862ED /* Presenter */,
 			);
 			path = View;
@@ -255,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				B16886922A7FFDE400BFC587 /* TabBarViewController.swift */,
+				B162E35C2A94946D00CDD8BF /* TabBarConstants.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -296,6 +310,7 @@
 			name = MedicApp;
 			packageProductDependencies = (
 				B1C1787D2A5B10B2003E49CF /* Alamofire */,
+				B162E35F2A9498AD00CDD8BF /* Kingfisher */,
 			);
 			productName = MedicApp;
 			productReference = B13C8EC82A51BDC800B4BE2F /* MedicApp.app */;
@@ -327,6 +342,7 @@
 			mainGroup = B13C8EBF2A51BDC800B4BE2F;
 			packageReferences = (
 				B1C1787C2A5B10B2003E49CF /* XCRemoteSwiftPackageReference "Alamofire" */,
+				B162E35E2A9498AD00CDD8BF /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = B13C8EC92A51BDC800B4BE2F /* Products */;
 			projectDirPath = "";
@@ -396,16 +412,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				B160CDDE2A6D7F4100E862ED /* SplashConstants.swift in Sources */,
+				B1653D552A85586B006B8306 /* FavoritesViewController.swift in Sources */,
 				B13C8ED02A51BDC800B4BE2F /* SplashViewController.swift in Sources */,
 				B150210C2A757BC600968116 /* PagesConstants.swift in Sources */,
 				B160CDE42A6D8B2600E862ED /* PagesViewDelegate.swift in Sources */,
 				B160CDE62A6D8E0B00E862ED /* HomeViewDataSource.swift in Sources */,
 				B131F1B12A76BCB500CF7CD3 /* HomeListDoctorUseCase.swift in Sources */,
+				B162E35D2A94946D00CDD8BF /* TabBarConstants.swift in Sources */,
 				B160CDE02A6D834900E862ED /* PagesViewDataSource.swift in Sources */,
 				B132F31B2A6EAC8E002B7B91 /* LoginConstants.swift in Sources */,
 				B131F1A32A76AC9200CF7CD3 /* HomeViewProtocol.swift in Sources */,
 				B160CDDC2A6D7BBC00E862ED /* Constants.swift in Sources */,
 				B16886932A7FFDE400BFC587 /* TabBarViewController.swift in Sources */,
+				B1653D572A8558C0006B8306 /* CalendarViewController.swift in Sources */,
 				B13C8ECC2A51BDC800B4BE2F /* AppDelegate.swift in Sources */,
 				B13C8ECE2A51BDC800B4BE2F /* SceneDelegate.swift in Sources */,
 				B15E92152A6AE9300044B3AD /* MedicModel.swift in Sources */,
@@ -417,6 +436,7 @@
 				B131F1AE2A76BB7400CF7CD3 /* HomeListDoctorApiRepository.swift in Sources */,
 				B13328542A5D8905004A4AFB /* InitViewController.swift in Sources */,
 				B160CDCF2A6D729500E862ED /* LoadingSpinnerView.swift in Sources */,
+				B1653D592A855958006B8306 /* SesionViewController.swift in Sources */,
 				B131F1A82A76B51B00CF7CD3 /* HomeListDoctorResApi.swift in Sources */,
 				B154A1DE2A6816D40034DD2C /* UserListCell.swift in Sources */,
 				B131F1B32A76BDED00CF7CD3 /* HomeViewPresenter.swift in Sources */,
@@ -617,6 +637,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B162E35E2A9498AD00CDD8BF /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		B1C1787C2A5B10B2003E49CF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -628,6 +656,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B162E35F2A9498AD00CDD8BF /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B162E35E2A9498AD00CDD8BF /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		B1C1787D2A5B10B2003E49CF /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B1C1787C2A5B10B2003E49CF /* XCRemoteSwiftPackageReference "Alamofire" */;

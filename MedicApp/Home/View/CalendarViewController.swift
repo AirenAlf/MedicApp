@@ -1,8 +1,10 @@
-//
-//  CalendarViewController.swift
-//  MedicApp
-//
-//  Created by Airen Alfonzo on 10/08/23.
-//
+import UIKit
 
-import Foundation
+class CalendarViewController : UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+       title = "Calendario"
+        
+    }
+}
